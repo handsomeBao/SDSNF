@@ -1321,4 +1321,13 @@ oxm_types = [
     oxm_fields.NiciraExtended1('reg5', 5, type_desc.Int4),
     oxm_fields.NiciraExtended1('reg6', 6, type_desc.Int4),
     oxm_fields.NiciraExtended1('reg7', 7, type_desc.Int4),
+
+    # Support for matching/setting middlebox basic header fields
+    oxm_fields.ExOFforSDMB('port_src_start', 0, type_desc.Int4),
+    oxm_fields.ExOFforSDMB('port_src_end', 1, type_desc.Int4),
+    oxm_fields.ExOFforSDMB('port_dst_start', 2, type_desc.Int4),
+    oxm_fields.ExOFforSDMB('port_dst_end', 3, type_desc.Int4),
+    oxm_fields.ExOFforSDMB('ipv4_src', 4, type_desc.IPv4Addr),
+    oxm_fields.ExOFforSDMB('ipv4_dst', 5, type_desc.IPv4Addr),
+    oxm_fields.ExOFforSDMB('ip_proto', 6, type_desc.Int1),
 ]

@@ -83,6 +83,7 @@ OFPXMC_NXM_1 = 1  # Nicira Extended Match (NXM_NX_)
 OFPXMC_OPENFLOW_BASIC = 0x8000
 OFPXMC_PACKET_REGS = 0x8001
 OFPXMC_EXPERIMENTER = 0xffff
+OFPXMC_SDMB = 0x9000
 
 
 class _OxmClass(object):
@@ -147,6 +148,12 @@ class NiciraExtended1(_OxmClass):
     """
 
     _class = OFPXMC_NXM_1
+
+
+class ExOFforSDMB(_OxmClass):
+    """Software-Defined middlebox protocol for snort.
+    """
+    _class = OFPXMC_SDMB
 
 
 def generate(modname):

@@ -70,6 +70,101 @@ OFPT_SET_ASYNC = 28                 # Controller/switch message
 
 OFPT_METER_MOD = 29                 # Controller/switch message
 
+# ------------------------------------- SDSNF Message Definition ------------------------------
+OFPRT_ALL_RULES_REQUEST = 30        # C/SNF message. Ask for getting all rules from SNF's Rule Table
+OFPRT_ALL_RULES_REPLY = 31          # C/SNF message. Send all rules of Rule Table to controller
+
+OFPRT_RULE_MOD = 32                 # C/SNF message. Modify rules in Rule Table
+OFPRT_RULE_STATUS = 33              # Async message. Inform the controller when rule table changes
+
+OFP_SNF_LOG_REQUEST = 34            # C/SNF message. Ask SNF to transfer matched logs.
+OFP_SNF_LOG_REPLY = 35              # Async message. Inform the controller when sending logs finishes
+
+OFP_SNF_ALERT = 36                  # Async message. Generate an alert to Controller
+OFP_SNF_ERROR = 37                  # Symmetric message. Report SNF's errors to Controller
+# ----------------------------------------------- END ------------------------------------------
+
+# ------------------------  Definition of the formats of messages in SDSNF ---------------------
+
+# OFPRT_ALL_RULES_REQUEST ----------------------------------------------------------------------
+# struct exofp_allrules_request
+EXOFP_ALLRULES_REQUEST_PACK_STR = '!'
+# ----------------------------------------------------------------------------------------------
+
+# OFPRT_RULE_MODE ------------------------------------------------------------------------------
+# struct exofp_rule_mod ------------------------------------------------------------------------
+_EXOFP_RULE_MOD_PACK_STR = '!QQBBHHHIIIH2X'
+EXOFP_RULE_MOD_PACK_STR = _EXOFP_RULE_MOD_PACK_STR + _OFP_MATCH_PACK_STR
+EXOFP_RULE_MOD_SIZE = 56
+assert (calcsize(EXOFP_RULE_MOD_PACK_STR) + OFP_HEADER_SIZE ==
+        EXOFP_RULE_MOD_SIZE)
+
+# enum exofp_rule_mod_command
+EXOFPRM_ADD = 0
+EXOFPRM_MODIFY = 1
+EXOFPRM_DELETE = 2
+
+# enum exofp_rule_mod_flags
+EXOFPRF_SEND_RULE_REM = 1 << 0
+EXOFPRF_CHECK_OVERLAP = 1 << 1
+
+# ----------------------------------------------------------------------------------------------
+
+# OFPRT_RULE_STATUS ----------------------------------------------------------------------------
+# struct exofp_rule_status
+EXOFP_RULE_STATUS_PACK_STR = '!B7x' + _OFP_PORT_PACK_STR
+OFP_PORT_STATUS_DESC_OFFSET = OFP_HEADER_SIZE + 8
+OFP_PORT_STATUS_SIZE = 80
+assert (calcsize(EXOFP_RULE_STATUS_PACK_STR) + OFP_HEADER_SIZE ==
+        OFP_PORT_STATUS_SIZE)
+
+# enum exofp_rule_reason
+EXOFPRT_ADD = 0       # The rule was added.
+EXOFPRT_DELETE = 1    # The rule was removed.
+EXOFPRT_MODIFY = 2    # Some attribute of the rule has changed.
+# ----------------------------------------------------------------------------------------------
+
+# OFP_SNF_ERROR --------------------------------------------------------------------------------
+# struct ofp_snf_error_msg
+OFP_SNF_ERROR_MSG_PACK_STR = '!HH'
+OFP_SNF_ERROR_MSG_SIZE = 12
+assert (calcsize(OFP_SNF_ERROR_MSG_PACK_STR) + OFP_HEADER_SIZE ==
+        OFP_SNF_ERROR_MSG_SIZE)
+
+# enum ofp_snf_error_type
+EXOFPET_RULE_MOD_FAILED = 0
+EXOFPET_BAD_MATCH = 1
+EXOFPET_LOG_REQUEST_FAILED = 2
+EXOFPET_ALLRULES_REQUEST_FAILED = 3
+EXOFPET_BAD_REQUEST = 4
+EXOFPET_EXPERIMENTER = 0xffff
+
+# enum exofp_bad_request_code
+EXOFPBR_BAD_VERSION = 0
+
+# enum exofp_rule_mod_failed_code
+EXOFPRMF_UNKNOWN = 0
+EXOFPRMF_BAD_FLAGS = 1
+EXOFPRMF_EPERM = 2
+EXOFPRMF_OVERLAP = 3
+
+# enum exofp_bad_match_code
+EXOFPBM_BAD_TYPE = 0
+EXOFPBM_BAD_LEN = 1
+EXOFPBM_BAD_TAG = 2
+
+# enum exofp_log_request_failed_code
+EXOFPLRF_NOT_EXIST = 0
+EXOFPLRF_EPERM = 1
+
+# enum exofp_allrules_request_failed_code
+EXOFPARRF_NO_RULES = 0
+EXOFPARRF_EPERM = 1
+# ---------------------------------------------------------------------------------------------
+
+# ------------------------------------------ END -----------------------------------------------
+
+
 # struct ofp_port
 OFP_MAX_PORT_NAME_LEN = 16
 OFP_ETH_ALEN = 6
@@ -350,6 +445,7 @@ OFP_TABLE_MOD_SIZE = 16
 assert (calcsize(OFP_TABLE_MOD_PACK_STR) + OFP_HEADER_SIZE ==
         OFP_TABLE_MOD_SIZE)
 
+# struct ofp_flow_mod
 _OFP_FLOW_MOD_PACK_STR0 = 'QQBBHHHIIIH2x'
 OFP_FLOW_MOD_PACK_STR = '!' + _OFP_FLOW_MOD_PACK_STR0 + _OFP_MATCH_PACK_STR
 OFP_FLOW_MOD_PACK_STR0 = '!' + _OFP_FLOW_MOD_PACK_STR0
