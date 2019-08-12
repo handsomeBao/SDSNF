@@ -1,0 +1,52 @@
+2017-09-05 - Snort 2.9.11
+[*] New additions
+ 
+ *  Changes to eliminate Snort restart when there are changes to the memory allocated for preprocessors, by releasing unused or least recently used memory when needed.
+
+ *  Added support for storing filenames in Unicode for SMB protocol.
+
+ *  Added implementation of hostPortCache versioning for unknown flows in AppID to detect and block BitTorrent.
+
+
+
+[*] Improvements
+ 
+ *  Enhanced RTSP metadata parsing to match the user-agent field to detect RTSP traffic over Windows Media.
+
+ *  Performance improvement when SYN rate limit has reached and drop is configured as next action
+
+ *  Control-socket and side-channel support for FreeBSD platform.
+
+ *  Fixed issue in file signature lookup for retransmitted FTP packet.
+ 
+ *  Enhanced the processing of SIP/RTP future flows without ignoring them.
+
+ *  Changes made in PDF/SWF decompression by adding boundary to the size of the decompressed data.
+
+ *  Added a null check to prevent copy unless debugHostIp is configured in AppId.
+
+ *  Fixed issue where FTP file type block doesn't work for retried download.
+
+ *  Resolved issue where Snort is inappropriately handling traffic for which
+    AppId was creating future flow.
+ 
+ *  Performance improvements for SIP/RTP audio and video data flow in AppId.
+ 
+ *  Performance and stability improvements in FTP preprocessor like incorrect
+    referencing of ftp_data_session after its pruned.
+ 
+ *  Stability improvement by resolving valgrind reported issues in AppId.
+
+ *  Improved flushing mechanism for HTTP POST header.
+
+ *  Added changes to display AppId for IPv6 unified events.
+
+ *  Fixed issues with printing of messages for out-of-order packets.
+ 
+ *  Fixed issue in increment of detection filter counter when rule is used in multiple configurations.
+ 
+ *  Fixed dynamic preprocessor compilation failure in OpenBSD platform.
+
+ *  Added changes to improve performance of ipvar list comparison.
+
+ *  Enhanced SMTP client detection by allowing line folding and all authentication methods.

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="helpers/negotiate_auth/mswin_sspi/negotiate_auth.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8042" topLine="298" />
+		</Cursor>
+	</File>
+	<File name="helpers/external_acl/mswin_ad_group/mswin_check_ad_group.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="23570" topLine="855" />
+		</Cursor>
+	</File>
+	<File name="src/neighbors.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="41891" topLine="1489" />
+		</Cursor>
+	</File>
+	<File name="tools/cossdump.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5935" topLine="240" />
+		</Cursor>
+	</File>
+	<File name="src/HttpBody.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2154" topLine="54" />
+		</Cursor>
+	</File>
+	<File name="src/client_side_rewrite.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5450" topLine="130" />
+		</Cursor>
+	</File>
+	<File name="helpers/digest_auth/eDirectory/ldap_backend.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="18548" topLine="673" />
+		</Cursor>
+	</File>
+	<File name="include/ntlmauth.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7206" topLine="164" />
+		</Cursor>
+	</File>
+	<File name="src/snmp_agent.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15322" topLine="491" />
+		</Cursor>
+	</File>
+	<File name="lib/heap.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14808" topLine="606" />
+		</Cursor>
+	</File>
+	<File name="src/fs/coss/async_io.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1501" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="lib/radix.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="28125" topLine="992" />
+		</Cursor>
+	</File>
+	<File name="src/helper.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="32750" topLine="1113" />
+		</Cursor>
+	</File>
+	<File name="helpers/digest_auth/ldap/digest_common.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1110" topLine="38" />
+		</Cursor>
+	</File>
+	<File name="src/store_client.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="21321" topLine="685" />
+		</Cursor>
+	</File>
+	<File name="src/snmp_core.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="40583" topLine="1116" />
+		</Cursor>
+	</File>
+	<File name="include/Array.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2002" topLine="35" />
+		</Cursor>
+	</File>
+	<File name="src/main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="18432" topLine="669" />
+		</Cursor>
+	</File>
+	<File name="src/squid.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1490" topLine="27" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

@@ -1,0 +1,3 @@
+/home/zyx/sdn/openvswitch-2.5.2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zyx/sdn/openvswitch-2.5.2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zyx/sdn/openvswitch-2.5.2/cmake-build-debug/CMakeFiles/openvswitch_2_5_2.dir

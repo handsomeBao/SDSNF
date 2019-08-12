@@ -1,0 +1,6 @@
+kernel//home/zyx/sdn/openvswitch-2.5.2/datapath/linux/openvswitch.ko
+kernel//home/zyx/sdn/openvswitch-2.5.2/datapath/linux/vport-geneve.ko
+kernel//home/zyx/sdn/openvswitch-2.5.2/datapath/linux/vport-gre.ko
+kernel//home/zyx/sdn/openvswitch-2.5.2/datapath/linux/vport-lisp.ko
+kernel//home/zyx/sdn/openvswitch-2.5.2/datapath/linux/vport-stt.ko
+kernel//home/zyx/sdn/openvswitch-2.5.2/datapath/linux/vport-vxlan.ko

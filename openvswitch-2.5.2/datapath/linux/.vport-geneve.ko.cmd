@@ -1,0 +1,1 @@
+cmd_/home/zyx/sdn/openvswitch-2.5.2/datapath/linux/vport-geneve.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/zyx/sdn/openvswitch-2.5.2/datapath/linux/vport-geneve.ko /home/zyx/sdn/openvswitch-2.5.2/datapath/linux/vport-geneve.o /home/zyx/sdn/openvswitch-2.5.2/datapath/linux/vport-geneve.mod.o
